@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Linguistics Experiment</title>
+        <style>
+            body {
+                height: 100vh;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+            }
+            .crosshair {
+                width: 100px;
+                height: 100px;
+                position: relative;
+            }
+            .line {
+                position: absolute;
+                background-color: black;
+            }
+            .vertical {
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 12px;
+                transform: translateX(-50%);
+            }
+            .horizontal {
+                left: 0;
+                right: 0;
+                top: 50%;
+                height: 12px;
+                transform: translateY(-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="crosshair">
+            <div class="line vertical"></div>
+            <div class="line horizontal"></div>
+        </div>
+        <script>
+            setTimeout(function() {
+                document.querySelector('.crosshair').style.display = 'none';
+                window.location.href='./3.html';
+            }, 10000);
+        </script>
+    </body>
+</html>
